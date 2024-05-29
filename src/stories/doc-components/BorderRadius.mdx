@@ -1,0 +1,29 @@
+import { Canvas, SourceState } from '@storybook/addon-docs';
+import Colors from '../../scss/riseup-js-colors.module.scss';
+import { BorderRadius } from '@/tokens/border-radius';
+import { CopyToClipboard } from './CopyToClipboard.mdx';
+import { SpacingContainer } from './UtilComponents.mdx';
+
+export const BorderRadii = () => {
+  return <Canvas withSource={SourceState.NONE}>
+    <SpacingContainer>
+      {
+        Object.entries(BorderRadius).map(([sizeName, size]) => {
+          const boxStyle = {
+            height: 150,
+            width: 150,
+            border: `1px solid ${Colors.riseupGray0}`,
+            boxShadow: `1px 1px 5px 0 ${Colors.riseupGray0}`,
+            borderRadius: size
+          };
+          return <div className={'ri-small-body flex-column align-center'}>
+            <div style={boxStyle} />
+            <div className={'margin-top-xxs'}>{size}</div>
+            <div className={'ri-bold-label'}>{sizeName.toUpperCase()}</div>
+            <CopyToClipboard text={`.border-radius-${sizeName.toLowerCase()}`} copiedText={`border-radius-${sizeName.toLowerCase()}`}/>
+          </div>;
+        })
+      }
+    </SpacingContainer>
+  </Canvas>;
+};

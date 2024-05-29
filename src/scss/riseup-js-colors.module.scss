@@ -1,0 +1,42 @@
+/*
+Enables using our color consts in JS.
+ */
+@import "./riseup-colors";
+
+:export {
+  riseupYellow: $riseup_yellow;
+  riseupLightYellow: $riseup_light_yellow;
+  riseupBeige: $riseup_beige;
+
+  riseupBlue: $riseup_blue;
+  riseupLightBlue: $riseup_light_blue;
+  riseupDarkBlue: $riseup_dark_blue;
+  riseupDarkBlue2: $riseup_dark_blue_2;
+
+  riseupGreen: $riseup_green;
+  riseupLightGreen: $riseup_light_green;
+  riseupDarkGreen: $riseup_dark_green;
+
+  riseupDangerRed: $riseup_danger_red;
+  riseupDangerLightRed: $riseup_danger_light_red;
+
+  riseupRed: $riseup_red;
+  riseupOrange: $riseup_orange;
+  riseupGray0: $riseup_gray_0;
+  riseupGray1: $riseup_gray_1;
+  riseupGray2: $riseup_gray_2;
+  riseupGray3: $riseup_gray_3;
+  riseupGray4: $riseup_gray_4;
+  riseupGray5: $riseup_gray_5;
+  riseupGrayDisabled: $riseup_gray_disabled;
+
+  riseupWhite: $riseup_white;
+  riseupGray05: $riseup_gray_05;
+  riseupGray10: $riseup_gray_10;
+  riseupGray20: $riseup_gray_20;
+  riseupGray40: $riseup_gray_40;
+  riseupGray60: $riseup_gray_60;
+  riseupGray80: $riseup_gray_80;
+  riseupGray100: $riseup_gray_100;
+  riseupBlack: $riseup_black;
+}

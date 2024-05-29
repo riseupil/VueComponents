@@ -1,0 +1,8 @@
+$ri-medium-box-shadow: 0px 4px 12px 0px #BABCBF40;
+
+.box-shadow-medium {
+    box-shadow: $ri-medium-box-shadow;
+}
+
+// SEMANTIC VARIABLES
+$card-box-shadow: $ri-medium-box-shadow;

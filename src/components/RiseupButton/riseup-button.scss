@@ -1,0 +1,15 @@
+@import "../../scss/riseup-colors";
+
+$button-colors: (// [background, text]
+        'blue': [$riseup_blue, $riseup_white],
+        'yellow': [$riseup_yellow, $riseup_gray_80],
+        'red': [$riseup_danger_red, $riseup_white],
+        'green': [$riseup_green, $riseup_white],
+        'pink': [$riseup_red, $riseup_white],
+        'black': [$riseup_black, $riseup_white],
+        'dark-green': [$riseup_dark_green, $riseup_white],
+        'dark-blue': [$riseup_dark_blue, $riseup_white],
+        'light-green': [$riseup_light_green, $riseup_dark_green],
+        'beige': [$riseup_beige, $riseup_black],
+        'orange': [$riseup_orange, $riseup_white],
+);

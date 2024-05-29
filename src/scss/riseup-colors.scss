@@ -1,0 +1,67 @@
+$riseup_red: #F34F8A;
+$riseup_light_saturated_red: #F89BB4;
+$riseup_danger_red: #FF653F;
+$riseup_danger_light_red: #FFCEB9;
+$riseup_danger_dark_red: #A5130A;
+$riseup_blue: #5D7AFD;
+$riseup_light_blue: #DCE8F6;
+$riseup_dark_blue: #142AA0;
+$riseup_dark_blue_2: #08134C;
+$riseup_green: #00C070;
+$riseup_light_green: #E8F4BA;
+$riseup_dark_green: #205441;
+$riseup_beige: #F9F7ED;
+$riseup_yellow: #FFCF03;
+$riseup_dark_yellow: #D3B019;
+$riseup_light_yellow: #FFEFC3;
+$riseup_orange: #FF7E14;
+
+// GRAYS
+$riseup_white: #ffffff;
+$riseup_gray_01: #FAFAFA;
+$riseup_gray_05: #F1F0EC;
+$riseup_gray_10: #E8E6E3;
+$riseup_gray_20: #D6D4D2;
+$riseup_gray_40: #B5B4B8;
+$riseup_gray_60: #8E8C8C;
+$riseup_gray_80: #414246;
+$riseup_gray_100: #202125;
+$riseup_black: $riseup_gray_100;
+
+$riseup_gray_-1: $riseup_gray_05;
+$riseup_gray_0: $riseup_gray_10;
+$riseup_gray_1: $riseup_gray_20;
+$riseup_gray_2: $riseup_gray_40;
+$riseup_gray_3: $riseup_gray_60;
+$riseup_gray_4: $riseup_gray_05;
+$riseup_gray_5: $riseup_gray_20;
+$riseup_gray_disabled: $riseup_gray_05;
+$riseup_gray_inputs: $riseup_gray_60;
+
+
+$variant-to-color: (
+  "white": $riseup_white,
+  "primary": $riseup_blue,
+  "blue": $riseup_blue,
+  "success": $riseup_green,
+  "green": $riseup_green,
+  "warning": $riseup_yellow,
+  "light-yellow": $riseup_light_yellow,
+  "yellow": $riseup_yellow,
+  "warm": $riseup_dark_yellow,
+  "danger": $riseup_danger_red,
+  "red": $riseup_danger_red,
+  "saving": $riseup_orange,
+  "orange": $riseup_orange,
+  "fixed": $riseup_red,
+  "pink": $riseup_red,
+  "neutral": $riseup_gray_2,
+  "light-blue": $riseup_light_blue,
+  "light-green": $riseup_light_green,
+  "dark-green": $riseup_dark_green,
+  "dark-blue": $riseup_dark_blue,
+  "beige": $riseup_beige,
+  "black": $riseup_black,
+  "saturated-red": $riseup_light_saturated_red,
+);
+$dark-text-variants: ('neutral', 'light-blue', 'light-green', 'white', 'warning', 'beige');

@@ -1,0 +1,127 @@
+import { Canvas, SourceState } from '@storybook/addon-docs';
+import Colors from '../../scss/riseup-js-colors.module.scss';
+import { Spacings } from '@/tokens/spacings';
+import { CopyToClipboard } from './CopyToClipboard.mdx';
+import { styled } from '@storybook/theming';
+
+export const SpacingContainer = styled.div`
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  row-gap: 24px;
+  column-gap: 32px;
+`;
+
+export const SpacingBlock = styled.div`
+  width: 40px;
+  height: ${props => props.size};
+  background: ${Colors.riseupDangerLightRed};
+`;
+
+export const SPACING_ITEM_SIZE = 130;
+
+export const Spacing = () => {
+  return <Canvas withSource={SourceState.NONE}>
+    <SpacingContainer>
+      {
+        Object.entries(Spacings).map(([sizeName, size]) => {
+          return <div className={'ri-small-body flex-column align-center'}>
+            <SpacingBlock size={size}/>
+            <div className={'margin-top-xxs'}>{size}</div>
+            <div className={'ri-bold-label'}>{sizeName.toUpperCase()}</div>
+          </div>;
+        })
+      }
+    </SpacingContainer>
+  </Canvas>;
+};
+
+export const BaseSpacingItem = ({ classes, width, height, size, paddingClassName, marginClassName }) => {
+  return <div className={'ri-small-body flex-column align-center'}>
+    <div className={classes} style={{ width, height, background: Colors.riseupDangerLightRed }}>
+      <div style={{ width: '100%', height: '100%', background: Colors.riseupGray4 }}/>
+    </div>
+    <div className={'margin-top-xxs'}>{size}</div>
+    <div className={'ri-bold-label'}><CopyToClipboard text={paddingClassName}/></div>
+    <div className={'ri-bold-label'}><CopyToClipboard text={marginClassName}/></div>
+  </div>;
+};
+
+export const OrientationSpacingItem = ({  size, sizeName, orientation }) => {
+  const paddedDimensions = SPACING_ITEM_SIZE - (parseInt(size.slice(0, -2)) * 2);
+  const width = orientation === 'horizontal' ? paddedDimensions : SPACING_ITEM_SIZE;
+  const height = orientation === 'horizontal' ? SPACING_ITEM_SIZE : paddedDimensions;
+  const className = `padding-${orientation}-${sizeName}`;
+  return <BaseSpacingItem
+    classes={className}
+    width={width}
+    height={height}
+    size={size}
+    paddingClassName={className}
+    marginClassName={`margin-${orientation}-${sizeName}`}
+  />
+};
+
+
+export const AllAroundSpacing = () => {
+  return <Canvas withSource={SourceState.NONE}>
+    <SpacingContainer>
+      {
+        Object.entries(Spacings).map(([sizeName, size]) => {
+          const paddedDim = SPACING_ITEM_SIZE - (parseInt(size.slice(0, -2)) * 2);
+          return <BaseSpacingItem
+            classes={`padding-${sizeName}`}
+            width={paddedDim}
+            height={paddedDim}
+            size={size}
+            paddingClassName={`padding-${sizeName}`}
+            marginClassName={`margin-${sizeName}`}
+            key={sizeName}/>;
+        })
+      }
+    </SpacingContainer>
+  </Canvas>;
+};
+
+export const HorizontalSpacing = () => {
+  return <Canvas withSource={SourceState.NONE}>
+    <SpacingContainer>
+      {
+        Object.entries(Spacings).map(([sizeName, size]) => <OrientationSpacingItem size={size} sizeName={sizeName} key={sizeName} orientation={'horizontal'}/>)
+      }
+    </SpacingContainer>
+  </Canvas>;
+};
+
+export const VerticalSpacing = () => {
+  return <Canvas withSource={SourceState.NONE}>
+    <SpacingContainer>
+      {
+        Object.entries(Spacings).map(([sizeName, size]) => <OrientationSpacingItem size={size} sizeName={sizeName} key={sizeName} orientation={'vertical'}/>)
+      }
+    </SpacingContainer>
+  </Canvas>;
+};
+
+export const SingleSideSpacing = () => {
+  return <Canvas withSource={SourceState.NONE}>
+    <SpacingContainer>
+      {
+        Object.entries(Spacings).map(([sizeName, size]) => {
+          const paddedDim = SPACING_ITEM_SIZE - (parseInt(size.slice(0, -2)));
+          return <BaseSpacingItem
+            classes={`padding-left-${sizeName}`}
+            width={paddedDim}
+            height={SPACING_ITEM_SIZE}
+            size={size}
+            paddingClassName={`padding-left-${sizeName}`}
+            marginClassName={`margin-left-${sizeName}`}
+            key={sizeName}/>;
+        })
+      }
+    </SpacingContainer>
+    <div className={'ri-label'}>(Also available for right / top / bottom)</div>
+  </Canvas>;
+};

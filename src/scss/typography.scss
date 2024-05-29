@@ -1,0 +1,240 @@
+// FONT SIZES
+$ri-font-size-12: 12px;
+$ri-font-size-14: 14px;
+$ri-font-size-16: 16px;
+$ri-font-size-18: 18px;
+$ri-font-size-20: 20px;
+$ri-font-size-22: 22px;
+$ri-font-size-24: 24px;
+$ri-font-size-26: 26px;
+$ri-font-size-28: 28px;
+$ri-font-size-32: 32px;
+$ri-font-size-36: 36px;
+$ri-font-size-40: 40px;
+$ri-font-size-44: 44px;
+$ri-font-size-48: 48px;
+$ri-font-size-50: 50px;
+$ri-font-size-54: 54px;
+$ri-font-size-64: 64px;
+$ri-font-size-70: 70px;
+$ri-font-size-80: 80px;
+$ri-font-size-regular: $ri-font-size-16;
+
+// CLASSES
+.ri-font-12 {
+    font-size: $ri-font-size-12;
+}
+
+.ri-font-14 {
+    font-size: $ri-font-size-14;
+}
+
+.ri-font-16 {
+    font-size: $ri-font-size-16;
+}
+
+.ri-font-18 {
+    font-size: $ri-font-size-18;
+}
+
+.ri-font-20 {
+    font-size: $ri-font-size-20;
+}
+
+.ri-font-22 {
+    font-size: $ri-font-size-22;
+}
+
+.ri-font-24 {
+    font-size: $ri-font-size-24;
+}
+
+.ri-font-26 {
+    font-size: $ri-font-size-26;
+}
+
+.ri-font-28 {
+    font-size: $ri-font-size-28;
+}
+
+.ri-font-32 {
+    font-size: $ri-font-size-32;
+}
+
+.ri-font-40 {
+    font-size: $ri-font-size-40;
+}
+
+.ri-font-50 {
+    font-size: $ri-font-size-50;
+}
+
+.ri-font-54 {
+    font-size: $ri-font-size-54;
+}
+
+.ri-font-64 {
+    font-size: $ri-font-size-64;
+}
+
+// FONT WEIGHTS
+$ri-font-weight-400: 400;
+$ri-font-weight-700: 700;
+$ri-font-weight-900: 900;
+$ri-font-weight-regular: $ri-font-weight-400;
+$ri-font-weight-bold: $ri-font-weight-700;
+
+// CLASSES
+
+.ri-font-weight-regular {
+    font-weight: $ri-font-weight-regular;
+}
+
+.ri-font-weight-bold {
+    font-weight: $ri-font-weight-bold;
+}
+
+
+// FONT FAMILY
+$ri-font: SimplerPro, sans-serif;
+
+// CLASSES
+.ri-font {
+    font-family: $ri-font;
+}
+
+// Typography
+.ri-giant-display {
+    font-family: SimplerPro, sans-serif;
+    font-size: $ri-font-size-54;
+    line-height: $ri-font-size-54;
+    font-weight: $ri-font-weight-regular;
+}
+
+.ri-large-display {
+    font-family: SimplerPro, sans-serif;
+    font-size: $ri-font-size-50;
+    line-height: $ri-font-size-50;
+    font-weight: $ri-font-weight-bold;
+}
+
+.ri-medium-bold-display {
+    font-family: SimplerPro, sans-serif;
+    font-size: $ri-font-size-40;
+    line-height: $ri-font-size-40;
+    font-weight: $ri-font-weight-bold;
+}
+
+.ri-medium-display {
+    font-family: SimplerPro, sans-serif;
+    font-size: $ri-font-size-40;
+    line-height: $ri-font-size-40;
+    font-weight: $ri-font-weight-regular;
+}
+
+.ri-small-display {
+    font-family: SimplerProAlte, sans-serif;
+    font-size: $ri-font-size-32;
+    line-height: $ri-font-size-36;
+    font-weight: $ri-font-weight-900;
+}
+
+.ri-large-headline {
+    font-family: SimplerProAlte, sans-serif;
+    font-size: $ri-font-size-24;
+    line-height: $ri-font-size-32;
+    font-weight: $ri-font-weight-bold;
+}
+
+.ri-medium-bold-headline {
+    font-family: SimplerProAlte, sans-serif;
+    font-size: $ri-font-size-22;
+    line-height: $ri-font-size-28;
+    font-weight: $ri-font-weight-bold;
+}
+
+.ri-medium-headline {
+    font-family: SimplerPro, sans-serif;
+    font-size: $ri-font-size-22;
+    line-height: $ri-font-size-28;
+    font-weight: $ri-font-weight-regular;
+}
+
+.ri-bold-title {
+    font-family: SimplerPro, sans-serif;
+    font-size: $ri-font-size-20;
+    line-height: $ri-font-size-26;
+    font-weight: $ri-font-weight-bold;
+}
+
+.ri-title {
+    font-family: SimplerPro, sans-serif;
+    font-size: $ri-font-size-20;
+    line-height: $ri-font-size-26;
+    font-weight: $ri-font-weight-regular;
+}
+
+.ri-large-bold-body {
+    font-family: SimplerPro, sans-serif;
+    font-size: $ri-font-size-18;
+    line-height: $ri-font-size-24;
+    font-weight: $ri-font-weight-bold;
+}
+
+.ri-large-body {
+    font-family: SimplerPro, sans-serif;
+    font-size: $ri-font-size-18;
+    line-height: $ri-font-size-24;
+    font-weight: $ri-font-weight-regular;
+}
+
+.ri-bold-body {
+    font-family: SimplerPro, sans-serif;
+    font-size: $ri-font-size-16;
+    line-height: $ri-font-size-24;
+    font-weight: $ri-font-weight-bold;
+}
+
+.ri-body {
+    font-family: SimplerPro, sans-serif;
+    font-size: $ri-font-size-16;
+    line-height: $ri-font-size-24;
+    font-weight: $ri-font-weight-regular;
+}
+
+.ri-bold-label {
+    font-family: SimplerPro, sans-serif;
+    font-size: $ri-font-size-14;
+    line-height: $ri-font-size-20;
+    font-weight: $ri-font-weight-bold;
+}
+
+.ri-label {
+    font-family: SimplerPro, sans-serif;
+    font-size: $ri-font-size-14;
+    line-height: $ri-font-size-20;
+    font-weight: $ri-font-weight-regular;
+}
+
+.ri-small-bold-body {
+    font-family: SimplerPro, sans-serif;
+    font-size: $ri-font-size-12;
+    line-height: $ri-font-size-16;
+    font-weight: $ri-font-weight-bold;
+}
+
+.ri-small-body {
+    font-family: SimplerPro, sans-serif;
+    font-size: $ri-font-size-12;
+    line-height: $ri-font-size-16;
+    font-weight: $ri-font-weight-regular;
+}
+
+.ri-alte {
+    font-family: SimplerProAlte, sans-serif;
+}
+
+.ri-alte-bold {
+    font-family: SimplerProAlte, sans-serif;
+    font-weight: $ri-font-weight-900;
+}

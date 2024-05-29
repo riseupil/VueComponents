@@ -1,0 +1,20 @@
+import { Contributor } from '@/stories/doc-components/Contributor.mdx';
+
+export const Contributors = () => {
+  return (
+    <div style={{
+      display: 'flex',
+      gap: '16px 64px',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      fontFamily: "'SimplerPro'",
+      fontWeight: 300,
+      margin: 32
+    }}>
+      <Contributor name="Ringo Starr" position="Product Designer" img="src/assets/play-video.svg"/>
+        <Contributor name="John Lennon" position="Product Manager" img="src/assets/play-video.svg"/>
+        <Contributor name="Paul McCartney" position="Software Engineer" img="src/assets/play-video.svg"/>
+        <Contributor name="George Harrison" position="Product Manager" img="src/assets/play-video.svg"/>
+    </div>
+  );
+};

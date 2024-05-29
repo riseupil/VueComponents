@@ -1,0 +1,65 @@
+import { Typography } from '../../tokens/typography';
+import { Canvas, Subtitle } from '@storybook/addon-docs';
+import { camelCaseToSpacedCase, stylePropsToCssClassDef, typographyVarToCssClass } from './doc-utils';
+import { CopyToClipboard } from './CopyToClipboard.mdx';
+import { LtrDiv, RtlDiv, FontDiv } from './UtilComponents.mdx';
+
+export const WeightRow = ({
+  className,
+  text,
+  value
+}) => (
+  <tr>
+    <td><FontDiv className={className}>{text}</FontDiv></td>
+    <td>{value}</td>
+    <td><CopyToClipboard text={`.${className}`}/></td>
+    <td><CopyToClipboard text={`$${className}`}/></td>
+  </tr>
+);
+
+export const WeightsTable = () => (
+  <table>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+      <th>Class Name</th>
+      <th>SCSS Variable</th>
+    </tr>
+    </thead>
+    <tbody>
+    <WeightRow className="ri-font-weight-regular" text="Regular רגיל" value="400"/>
+    <WeightRow className="ri-font-weight-bold" text="Bold בולד" value="700"/>
+    </tbody>
+  </table>
+);
+
+export const TypographyPreview = ({
+  name,
+  properties
+}) => (
+  <Canvas mdxSource={`.${typographyVarToCssClass[name]}: {\n${stylePropsToCssClassDef(properties)}\n}`} isColumn>
+    <div style={properties}>
+      <LtrDiv>{'The quick brown fox jumps over the lazy dog.'}</LtrDiv>
+      <RtlDiv>{'מנעולן הפך כף חצץ שגזר קט איבד סתם.'}</RtlDiv>
+    </div>
+  </Canvas>
+);
+
+export const Typographies = () => (
+  <LtrDiv>
+    {
+      Object.entries(Typography)
+        .map(([name, properties]) => (
+          <div key={name} className="padding-m">
+            <h3>{camelCaseToSpacedCase(name)}</h3>
+            <Subtitle>
+              <div>{Object.values(properties).join(", ")}</div>
+              <CopyToClipboard text={`.${typographyVarToCssClass[name]}`}/>
+            </Subtitle>
+            <TypographyPreview name={name} properties={properties}/>
+          </div>
+        ))
+    }
+  </LtrDiv>
+);

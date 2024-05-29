@@ -1,0 +1,20 @@
+$ri-border-radius-small: 10px;
+$ri-border-radius-medium: 14px;
+$ri-border-radius-large: 18px;
+
+.border-radius-small {
+    border-radius: $ri-border-radius-small;
+}
+
+.border-radius-medium {
+    border-radius: $ri-border-radius-medium;
+}
+
+.border-radius-large {
+    border-radius: $ri-border-radius-large;
+}
+
+// SEMANTIC VARIABLES
+$card-border-radius: $ri-border-radius-large;
+$button-border-radius: $ri-border-radius-medium;
+$input-field-border-radius: $ri-border-radius-small;

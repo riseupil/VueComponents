@@ -1,0 +1,20 @@
+@import "../src/scss/riseup-colors";
+@import "../src/scss/typography";
+@import "../src/scss/layout";
+@import "../src/scss/spacings";
+
+#root { // only apply to components, not docs
+  font-family: SimplerPro, sans-serif;
+  direction: rtl;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#docs-root { // only apply to docs, not components
+  a {
+    color: $riseup_blue;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

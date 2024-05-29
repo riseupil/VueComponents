@@ -1,0 +1,15 @@
+$bar-z-index: 2;
+$label-z-index: 3;
+$hovered-bar-z-index: 4;
+$label-height: 26px;
+
+.label {
+  visibility: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: fit-content;
+  padding: 4px;
+  border-radius: 4px;
+  z-index: $label-z-index;
+  height: $label-height;
+}

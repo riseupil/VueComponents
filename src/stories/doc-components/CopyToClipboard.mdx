@@ -1,0 +1,21 @@
+import { Description } from '@storybook/addon-docs';
+import { copyToClipboard } from './doc-utils';
+import { styled } from '@storybook/theming';
+
+export const CopyToClipboard = ({ text, copiedText }) => (
+  <CopyContainer>
+    <CopyIcon className="icon icon-outlined" onClick={() => copyToClipboard(copiedText ?? text)}>content_copy</CopyIcon>
+    <Description markdown={`\`${text}\``}/>
+  </CopyContainer>
+);
+
+export const CopyContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-height: 32px;
+`;
+
+export const CopyIcon = styled.span`
+  cursor: pointer;
+`;

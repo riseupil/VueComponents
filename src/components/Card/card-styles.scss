@@ -1,0 +1,28 @@
+@import "../../scss/riseup-colors";
+@import "../../scss/riseup-z-index";
+@import "../../scss/box-shadow";
+@import "../../scss/border-radius";
+
+$card-border: 1px solid $riseup_gray_0;
+
+.card {
+  position: relative; // to allow child menu to be positioned on top
+  font-family: SimplerPro, sans-serif;
+  min-height: 40px;
+  width: 100%;
+  border-radius: $card-border-radius;
+  box-shadow: $card-box-shadow;
+  overflow: visible;
+  outline: $card-border;
+
+  .content {
+    height: 100%;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    border-radius: 0 0 $card-border-radius $card-border-radius;
+  }
+
+  .card-padding {
+    padding: 0 24px;
+  }
+}

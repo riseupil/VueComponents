@@ -1,0 +1,23 @@
+import { styled } from '@storybook/theming';
+
+export const LtrDiv = styled.div`
+  direction: ltr;
+`;
+
+export const RtlDiv = styled.div`
+  direction: rtl;
+`;
+
+export const FontDiv = styled.div`
+  font-family: SimplerPro, sans-serif;
+`;
+
+export const SpacingContainer = styled.div`
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  row-gap: 24px;
+  column-gap: ${props => props.columnGap ?? 32}px;
+`;
